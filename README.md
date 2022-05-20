@@ -65,3 +65,8 @@ require("xpm").setup({
 
 - Swap the current selection with any register.
 - See the active registers with selection count.
+
+## Todo
+
+- [ ] Global registers
+- [ ] Clipboard support
