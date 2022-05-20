@@ -125,10 +125,17 @@ local function setup(args)
       { "───", "──────────" },
     }
 
-    local _registers = all()
-    table.sort(_registers)
-    for reg, selection in pairs(_registers) do
-      table.insert(view, { format(reg), tostring(#selection) })
+    local _registers = {}
+    for reg, selection in pairs(all()) do
+      table.insert(_registers, { reg = reg, selection = selection })
+    end
+
+    table.sort(_registers, function(a, b)
+      return a.reg < b.reg
+    end)
+
+    for _, x in ipairs(_registers) do
+      table.insert(view, { format(x.reg), tostring(#x.selection) })
     end
 
     return view
