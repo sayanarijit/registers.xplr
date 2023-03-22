@@ -54,8 +54,8 @@ local function setup(args)
               body = {
                 DynamicTable = {
                   widths = {
-                    { Length = 5 },
-                    { MinLessThanLayoutWidth = 5 },
+                    { Length = 10 },
+                    { MinLessThanLayoutWidth = 10 },
                   },
                   render = "custom.registers.render",
                 },
